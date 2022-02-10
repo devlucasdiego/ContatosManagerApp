@@ -1,16 +1,33 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async, waitForAsync } from '@angular/core/testing';
+import { AppComponent } from './app.component';
 
-import { ContatoService } from './contato.service';
+describe('AppComponent', () => {
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [AppComponent],
+      }).compileComponents();
+    })
+  );
 
-describe('ContatoService', () => {
-  let service: ContatoService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ContatoService);
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it(`should have as title 'contatosmanagerapp'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('contatosmanagerapp');
+  });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.content span').textContent).toContain(
+      'contatosmanagerapp app is running!'
+    );
   });
 });
