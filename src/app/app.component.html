@@ -40,8 +40,8 @@
       <div class="card m-b-30">
         <div class="card-body row">
           <div class="col-6 card-title align-self-center mb-0">
-            <h5>{{ contato?.nome }}</h5>
-            <p class="m-0">{{ contato?.cargo }}</p>
+            <h5>Nome: {{ contato?.nome }}</h5>
+            <p class="m-0">Cargo: {{ contato?.cargo }}</p>
           </div>
         </div>
         <ul class="list-group list-group-flush">
@@ -118,7 +118,7 @@
                 name="nome"
                 class="form-control"
                 id="nome"
-                placeholder="Nome"
+                placeholder="ex: Rick Astley"
                 required
               />
             </div>
@@ -131,7 +131,7 @@
                 name="cargo"
                 class="form-control"
                 id="cargo"
-                placeholder="Cargo"
+                placeholder="ex: Servidor"
                 required
               />
             </div>
@@ -144,7 +144,7 @@
                 name="sigla"
                 class="form-control"
                 id="sigla"
-                placeholder="Sigla"
+                placeholder="ex: CTJ"
                 required
               />
             </div>
@@ -157,7 +157,7 @@
                 name="nomeComarca"
                 class="form-control"
                 id="nomeComarca"
-                placeholder="Comarca"
+                placeholder="ex: Várzea Grande"
                 required
               />
             </div>
@@ -170,7 +170,7 @@
                 name="circuito"
                 class="form-control"
                 id="circuito"
-                placeholder="Circuito"
+                placeholder="ex: CBA 0465000 (OI) / VAZ054457918A (BRDIGITAL) "
                 required
               />
             </div>
@@ -183,7 +183,7 @@
                 name="numero"
                 class="form-control"
                 id="numero"
-                placeholder="Contato"
+                placeholder="ex: (00) 9 99998888 ou 3617-3900"
                 required
               />
             </div>
@@ -238,7 +238,7 @@
         <div class="modal-body">
           <form #editForm="ngForm">
             <div class="form-group">
-              <label for="name">Nome</label>
+              <label for="nome">Nome</label>
               <input
                 type="text"
                 ngModel="{{ editContato?.nome }}"
@@ -246,67 +246,67 @@
                 class="form-control"
                 id="nome"
                 aria-describedby="emailHelp"
-                placeholder="Nome"
+                placeholder="ex: Rick Astley"
               />
             </div>
 
             <div class="form-group">
-              <label for="phone">Cargo</label>
+              <label for="cargo">Cargo</label>
               <input
                 type="text"
                 ngModel="{{ editContato?.cargo }}"
                 name="cargo"
                 class="form-control"
                 id="cargo"
-                placeholder="Cargo"
+                placeholder="ex: Servidor"
               />
             </div>
 
             <div class="form-group">
-              <label for="phone">Sigla</label>
+              <label for="siglaComarca">Sigla</label>
               <input
                 type="text"
                 ngModel="{{ editContato?.siglaComarca }}"
                 name="siglaComarca"
                 class="form-control"
                 id="siglaComarca"
-                placeholder="Sigla"
+                placeholder="ex: CTJ"
               />
             </div>
 
             <div class="form-group">
-              <label for="phone">Comarca</label>
+              <label for="nomeComarca">Comarca</label>
               <input
                 type="text"
                 ngModel="{{ editContato?.nomeComarca }}"
                 name="nomeComarca"
                 class="form-control"
                 id="nomeComarca"
-                placeholder="Comarca"
+                placeholder="ex: Várzea Grande"
               />
             </div>
 
             <div class="form-group">
-              <label for="phone">Circuito</label>
+              <label for="circuito">Circuitos</label>
               <input
                 type="text"
                 ngModel="{{ editContato?.circuito }}"
                 name="circuito"
                 class="form-control"
                 id="circuito"
-                placeholder="Circuito"
+                placeholder="ex: CBA 0465000 (OI) ou VAZ054457918A (BRDIGITAL) "
               />
             </div>
 
             <div class="form-group">
-              <label for="phone">Contato</label>
+              <label for="numero">Contatos</label>
               <input
                 type="text"
                 ngModel="{{ editContato?.numero }}"
                 name="numero"
                 class="form-control"
                 id="numero"
-                placeholder="Contato"
+                placeholder="ex: (00) 9 99998888 ou 3617-3900"
               />
             </div>
 
