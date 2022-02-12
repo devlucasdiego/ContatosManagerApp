@@ -10,10 +10,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  public contatos: Contato[] = [];
-  public editContato!: Contato;
-  public deleteContato!: Contato;
-  title: any;
+  [x: string]: any;
+  public contatos: Contato[];
+  public editContato: Contato;
+  public deleteContato: Contato;
 
   constructor(private contatoService: ContatoService) {}
 
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
   }
 
   public onAddContato(addForm: NgForm): void {
-    document.getElementById('add-contato-form')!.click();
+    document.getElementById('add-contato-form').click();
     this.contatoService.addContato(addForm.value).subscribe(
       (response: Contato) => {
         console.log(response);
@@ -78,10 +78,10 @@ export class AppComponent implements OnInit {
     for (const contato of this.contatos) {
       if (
         contato.nome.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
+        contato.cargo.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
         contato.siglaComarca.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
         contato.nomeComarca.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
         contato.circuito.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
-        contato.cargo.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
         contato.numero.toLowerCase().indexOf(key.toLowerCase()) !== -1
       ) {
         results.push(contato);
@@ -110,7 +110,7 @@ export class AppComponent implements OnInit {
       this.deleteContato = contato;
       button.setAttribute('data-target', '#deleteContatoModal');
     }
-    container!.appendChild(button);
+    container.appendChild(button);
     button.click();
   }
 }

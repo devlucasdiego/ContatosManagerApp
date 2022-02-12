@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'contatomanagerapp'`, () => {
+  it(`should have as title 'contatosmanagerapp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('contatomanagerapp');
+    expect(app.title).toEqual('contatosmanagerapp');
   });
 
   it('should render title', () => {
@@ -27,7 +27,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain(
-      'contatomanagerapp app is running!'
+      'contatosmanagerapp app is running!'
     );
   });
 });
