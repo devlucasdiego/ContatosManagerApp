@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" (click)="onOpenModal(null!, 'add')"
+        <a class="nav-link" (click)="onOpenModal(null, 'add')"
           >Adicionar Contato <span class="sr-only">(current)</span></a
         >
       </li>
@@ -26,7 +26,7 @@
         #key="ngModel"
         ngModel
         name="key"
-        id="searchName"
+        id="searchNome"
         class="form-control mr-sm-2"
         placeholder="Procurar contatos..."
         required
@@ -34,6 +34,7 @@
     </form>
   </div>
 </nav>
+
 <div class="container" id="main-container">
   <div class="row">
     <div *ngFor="let contato of contatos" class="col-md-6 col-xl-3">
@@ -62,6 +63,7 @@
             {{ contato?.numero }}
           </li>
         </ul>
+
         <div class="card-body">
           <div class="float-right btn-group btn-group-sm">
             <a
@@ -111,7 +113,7 @@
         <div class="modal-body">
           <form #addForm="ngForm" (ngSubmit)="onAddContato(addForm)">
             <div class="form-group">
-              <label for="name">Nome</label>
+              <label for="nome">Nome</label>
               <input
                 type="text"
                 ngModel
@@ -123,25 +125,8 @@
               />
             </div>
 
-            <input
-              type="hidden"
-              ngModel="{{ editContato?.id }}"
-              name="id"
-              class="form-control"
-              id="id"
-              placeholder="Email"
-            />
-            <input
-              type="hidden"
-              ngModel="{{ editContato?.codContato }}"
-              name="userCode"
-              class="form-control"
-              id="userCode"
-              placeholder="Email"
-            />
-
             <div class="form-group">
-              <label for="email">Cargo</label>
+              <label for="cargo">Cargo</label>
               <input
                 type="text"
                 ngModel
@@ -154,20 +139,20 @@
             </div>
 
             <div class="form-group">
-              <label for="email">Sigla</label>
+              <label for="siglaComarca">Sigla</label>
               <input
                 type="text"
                 ngModel
-                name="sigla"
+                name="siglaComarca"
                 class="form-control"
-                id="sigla"
+                id="siglaComarca"
                 placeholder="ex: CTJ"
                 required
               />
             </div>
 
             <div class="form-group">
-              <label for="email">Comarca</label>
+              <label for="nomeComarca">Comarca</label>
               <input
                 type="text"
                 ngModel
@@ -180,7 +165,7 @@
             </div>
 
             <div class="form-group">
-              <label for="email">Circuito</label>
+              <label for="circuito">Circuito</label>
               <input
                 type="text"
                 ngModel
@@ -193,7 +178,7 @@
             </div>
 
             <div class="form-group">
-              <label for="email">Contato</label>
+              <label for="numero">Contato</label>
               <input
                 type="text"
                 ngModel
@@ -252,6 +237,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
         <div class="modal-body">
           <form #editForm="ngForm">
             <div class="form-group">
@@ -385,7 +371,7 @@
               Não
             </button>
             <button
-              (click)="onDeleteContato(deleteContato?.id!)"
+              (click)="onDeleteContato(deleteContato?.id)"
               class="btn btn-danger"
               data-dismiss="modal"
             >
