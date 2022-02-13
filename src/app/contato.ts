@@ -6,4 +6,5 @@ export interface Contato {
   circuito: string;
   cargo: string;
   numero: string;
+  codContato: string;
 }
