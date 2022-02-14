@@ -262,6 +262,23 @@
               />
             </div>
 
+            <input
+              type="hidden"
+              ngModel="{{ editContato?.id }}"
+              name="id"
+              class="form-control"
+              id="id"
+              placeholder="id"
+            />
+            <input
+              type="hidden"
+              ngModel="{{ editContato?.codContato }}"
+              name="codContato"
+              class="form-control"
+              id="codContato"
+              placeholder="cod"
+            />
+
             <div class="form-group">
               <label for="cargo">Cargo</label>
               <input
