@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" style="color: white">Contatos Manager</a>
+  <a class="navbar-brand" style="color: rgb(0, 141, 138); font-weight: 500"
+    >Contatos Manager</a
+  >
   <button
     class="navbar-toggler"
     type="button"
@@ -14,9 +16,14 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" (click)="onOpenModal(null, 'add')"
-          >Adicionar Contato <span class="sr-only">(current)</span></a
-        >
+        <button type="button" class="btn btn-outline-info">
+          <a
+            class="nav-link"
+            style="color: white"
+            (click)="onOpenModal(null, 'add')"
+            >Adicionar Contato <span class="sr-only">(current)</span></a
+          >
+        </button>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -40,9 +47,11 @@
     <div *ngFor="let contato of contatos" class="col-md-6 col-xl-3">
       <div class="card m-b-30">
         <div class="card-body row">
-          <div class="col-6 card-title align-self-center mb-0">
-            <h5>Nome: {{ contato?.nome }}</h5>
-            <p class="m-0">Cargo: {{ contato?.cargo }}</p>
+          <div class="list-group list-group-flush">
+            <li class="list-group-item">
+              <h5 class="card-title">Nome: {{ contato?.nome }}</h5>
+              <p class="card-text">Cargo: {{ contato?.cargo }}</p>
+            </li>
           </div>
         </div>
         <ul class="list-group list-group-flush">
@@ -68,7 +77,7 @@
           <div class="float-right btn-group btn-group-sm">
             <a
               (click)="onOpenModal(contato, 'edit')"
-              class="btn btn-primary tooltips"
+              class="btn btn-info tooltips"
               data-placement="top"
               data-original-title="Edit"
               ><i class="fa fa-pencil"></i>
@@ -202,7 +211,7 @@
               <button
                 [disabled]="addForm.invalid"
                 type="submit"
-                class="btn btn-primary"
+                class="btn btn-info"
               >
                 Salvar Alterações
               </button>
@@ -325,7 +334,7 @@
               <button
                 (click)="onUpdateContato(editForm.value)"
                 data-dismiss="modal"
-                class="btn btn-primary"
+                class="btn btn-info"
               >
                 Salvar alterações
               </button>
