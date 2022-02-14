@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
     for (const contato of this.contatos) {
       if (
         contato.nome.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
-        contato.cargo.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
+        contato.perfil.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
         contato.siglaComarca.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
         contato.nomeComarca.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||
         contato.circuito.toLowerCase().indexOf(key.toLowerCase()) !== -1 ||

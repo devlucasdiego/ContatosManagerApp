@@ -4,7 +4,7 @@ export interface Contato {
   siglaComarca: string;
   nomeComarca: string;
   circuito: string;
-  cargo: string;
+  perfil: string;
   numero: string;
   codContato: string;
 }

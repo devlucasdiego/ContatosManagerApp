@@ -50,7 +50,7 @@
           <div class="list-group list-group-flush">
             <li class="list-group-item">
               <h5 class="card-title">Nome: {{ contato?.nome }}</h5>
-              <p class="card-text">Cargo: {{ contato?.cargo }}</p>
+              <p class="card-text">Perfil: {{ contato?.perfil }}</p>
             </li>
           </div>
         </div>
@@ -135,13 +135,13 @@
             </div>
 
             <div class="form-group">
-              <label for="cargo">Cargo</label>
+              <label for="perfil">Perfil</label>
               <input
                 type="text"
                 ngModel
-                name="cargo"
+                name="perfil"
                 class="form-control"
-                id="cargo"
+                id="perfil"
                 placeholder="ex: Servidor"
                 required
               />
@@ -280,13 +280,13 @@
             />
 
             <div class="form-group">
-              <label for="cargo">Cargo</label>
+              <label for="perfil">Perfil</label>
               <input
                 type="text"
-                ngModel="{{ editContato?.cargo }}"
-                name="cargo"
+                ngModel="{{ editContato?.perfil }}"
+                name="perfil"
                 class="form-control"
-                id="cargo"
+                id="perfil"
                 placeholder="ex: Servidor"
               />
             </div>
