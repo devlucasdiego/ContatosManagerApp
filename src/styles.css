@@ -24,6 +24,13 @@ a {
   width: 60px;
 }
 
+.logo {
+  max-height: 80px;
+}
+.logo1 {
+  max-height: 50px;
+}
+
 h1,
 h2,
 h3,
