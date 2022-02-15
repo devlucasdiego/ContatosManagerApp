@@ -20,6 +20,10 @@ a {
   margin-bottom: 30px;
 }
 
+.card-title {
+  color: rgb(23, 162, 184);
+}
+
 .w-60 {
   width: 60px;
 }
