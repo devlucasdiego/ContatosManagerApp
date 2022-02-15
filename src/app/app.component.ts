@@ -11,9 +11,9 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   [x: string]: any;
-  public contatos: Contato[];
-  public editContato: Contato;
-  public deleteContato: Contato;
+  public contatos!: Contato[];
+  public editContato!: Contato;
+  public deleteContato!: Contato;
 
   constructor(private contatoService: ContatoService) {}
 
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
   }
 
   public onAddContato(addForm: NgForm): void {
-    document.getElementById('add-contato-form').click();
+    document.getElementById('add-contato-form')!.click();
     this.contatoService.addContato(addForm.value).subscribe(
       (response: Contato) => {
         console.log(response);
@@ -110,7 +110,7 @@ export class AppComponent implements OnInit {
       this.deleteContato = contato;
       button.setAttribute('data-target', '#deleteContatoModal');
     }
-    container.appendChild(button);
+    container!.appendChild(button);
     button.click();
   }
 }
